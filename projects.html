@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+<!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@700;900&display=swap"
+    rel="stylesheet">
+    <style>
+
+    </style>
+</head>
+<body>
+    
+      <!-- 
+        - #BLOG
+      -->
+
+      <section class="section blog" id="blog" aria-label="blog">
+        <div class="container">
+
+          <p class="section-subtitle">Recent Blogs</p>
+
+          <h2 class="h2 section-title">Our Tips And Latest News</h2>
+
+          <ul class="blog-list">
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 768; --height: 558;">
+                  <img src="./assets/images/blog-1.jpg" width="768" height="558" loading="lazy"
+                    alt="Build A Full Web Chat App From Our Scratch" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <ul class="card-meta-list">
+
+                    <li class="card-meta-item">
+                      <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+
+                      <time class="card-meta-text" datetime="2022-05-22">May 22,2022</time>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <ion-icon name="chatbox-outline" aria-hidden="true"></ion-icon>
+
+                      <p class="card-meta-text">2 Comment</p>
+                    </li>
+
+                  </ul>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Build A Full Web Chat App From Our Scratch</a>
+                  </h3>
+
+                  <a href="#" class="btn btn-outline">Read More</a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 768; --height: 558;">
+                  <img src="./assets/images/blog-2.jpg" width="768" height="558" loading="lazy"
+                    alt="Brush Strokes Energize Trees In Paintings" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <ul class="card-meta-list">
+
+                    <li class="card-meta-item">
+                      <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+
+                      <time class="card-meta-text" datetime="2022-05-22">May 22,2022</time>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <ion-icon name="chatbox-outline" aria-hidden="true"></ion-icon>
+
+                      <p class="card-meta-text">2 Comment</p>
+                    </li>
+
+                  </ul>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Brush Strokes Energize Trees In Paintings</a>
+                  </h3>
+
+                  <a href="#" class="btn btn-outline">Read More</a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 768; --height: 558;">
+                  <img src="./assets/images/blog-3.jpg" width="768" height="558" loading="lazy"
+                    alt="Insights on How to Improve Your Teaching." class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <ul class="card-meta-list">
+
+                    <li class="card-meta-item">
+                      <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+
+                      <time class="card-meta-text" datetime="2022-05-22">May 22,2022</time>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <ion-icon name="chatbox-outline" aria-hidden="true"></ion-icon>
+
+                      <p class="card-meta-text">2 Comment</p>
+                    </li>
+
+                  </ul>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Insights on How to Improve Your Teaching.</a>
+                  </h3>
+
+                  <a href="#" class="btn btn-outline">Read More</a>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+    <script>
+
+        'use strict';
+
+
+
+/**
+ * add event on element
+ */
+
+const addEventOnElem = function (elem, type, callback) {
+  if (elem.length > 1) {
+    for (let i = 0; i < elem.length; i++) {
+      elem[i].addEventListener(type, callback);
+    }
+  } else {
+    elem.addEventListener(type, callback);
+  }
+}
+
+
+
+/**
+ * navbar toggle
+ */
+
+const navbar = document.querySelector("[data-navbar]");
+const navToggler = document.querySelector("[data-nav-toggler]");
+const navLinks = document.querySelectorAll("[data-nav-link]");
+
+const toggleNavbar = function () { navbar.classList.toggle("active"); }
+
+addEventOnElem(navToggler, "click", toggleNavbar);
+
+const closeNavbar = function () { navbar.classList.remove("active"); }
+
+addEventOnElem(navLinks, "click", closeNavbar);
+
+
+
+/**
+ * header active
+ */
+
+const header = document.querySelector("[data-header]");
+const backTopBtn = document.querySelector("[data-back-top-btn]");
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 100) {
+    header.classList.add("active");
+    backTopBtn.classList.add("active");
+  } else {
+    header.classList.remove("active");
+    backTopBtn.classList.remove("active");
+  }
+});
+    </script>
+</body>
+</html>
